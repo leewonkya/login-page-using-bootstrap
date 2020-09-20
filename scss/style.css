@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../public/image/jasper-wilde-Om51NdOhNX4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  position: absolute;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  min-height: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card-header .card-title {
+  text-transform: uppercase;
+  color: #434343;
+  font-size: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.card-header .switch {
+  position: relative;
+  display: inline-block !important;
+  width: 65px;
+  height: 34px;
+}
+
+.card-header .switch .checkbox {
+  display: none;
+}
+
+.card-header .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.card-header .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.card-header .switch .checkbox:checked + .slider {
+  background-color: #2196F3;
+}
+
+.card-header .switch .checkbox:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.card-header .switch .checkbox:checked + .slider:before {
+  -webkit-transform: translate(30px);
+          transform: translate(30px);
+}
+
+.card-body {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 auto !important;
+          flex: 0 0 auto !important;
+}
+
+.card-body .text-other {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body .text-other:before {
+  position: absolute;
+  width: 30%;
+  content: "";
+  top: 12px;
+  left: 0;
+  border: solid 0.5px #bababa;
+}
+
+.card-body .text-other:after {
+  position: absolute;
+  width: 30%;
+  content: "";
+  top: 12px;
+  right: 0;
+  border: solid 0.5px #bababa;
+}
+
+/* Mixin */
+/*# sourceMappingURL=style.css.map */

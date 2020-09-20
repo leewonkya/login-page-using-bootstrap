@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./vendors/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./vendors/fontawesome-free-5.14.0-web/css/all.min.css">
+
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="card">
+                <div class="card-header bg-white border-bottom-0 d-flex flex-row align-items-start justify-content-between">
+                    <div class="card-title">Sign in</div>
+                    <label class="switch">
+                        <input type="checkbox" class="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="card-body py-0 form-sign-in">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control" placeholder="Input your username...">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control" placeholder="Input your password...">
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <small><a href="#"  data-toggle="modal" data-target="#ModalMissingpassword">Forgot your password?</a></small>
+
+                        <input type="submit" class="btn btn-primary px-3" value="Sign in">
+                    </div>
+                    <div class="text-center my-2 text-other">Other login with</div>
+                    <div class="row justify-content-around text-center">
+                        <div class="col-4">
+                            <button class="btn btn-primary px-3">
+                                <i class="fab fa-facebook-square"></i>
+                                Facebook
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-danger px-3">
+                                <i class="fab fa-google"></i>
+                                Google
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-secondary px-3">
+                                <i class="fab fa-github"></i>
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-0 form-sign-up d-none">
+                    <div class="form-group">
+                        <label for="">Username:</label>
+                        <input type="text" class="form-control form-control form-control-sm" placeholder="Input your username...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password:</label>
+                        <input type="text" class="form-control form-control form-control-sm" placeholder="Input your password...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email:</label>
+                        <input type="email" class="form-control form-control form-control-sm" placeholder="Input your Email...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Number Phone:</label>
+                        <input type="text" class="form-control form-control form-control-sm" placeholder="Input your Number phone...">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Address:</label>
+                        <input type="text" class="form-control form-control form-control-sm" placeholder="Input your Address...">
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <div class="col-3">
+                            <label for="">Gender:</label>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-control">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" class="btn btn-primary px-3" value="Sign up">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ModalMissingpassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Missing password</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">Input your email:</label>
+                                <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Your email...">
+                                <small id="emailHelpId" class="form-text text-muted">Write your email to get password</small>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./vendors/jquery/jquery-3.5.1.min.js"></script>
+
+    <script src="./vendors/popper/popper.min.js"></script>
+
+    <script src="./vendors/fontawesome-free-5.14.0-web/js/all.min.js"></script>
+
+    <script src="./vendors/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.checkbox').change(function() {
+                var a = $(".form-sign-in");
+                var b = $(".form-sign-up");
+                if ($(this).is(':checked')) {
+                    $(".card-title").text("SIGN UP");
+                    a.addClass("d-none");
+                    b.removeClass("d-none");
+                } else {
+                    $(".card-title").text("SIGN IN");
+                    a.removeClass("d-none");
+                    b.addClass("d-none");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
