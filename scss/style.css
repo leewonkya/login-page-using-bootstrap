@@ -8,9 +8,10 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../../public/image/jasper-wilde-Om51NdOhNX4-unsplash.jpg);
+  background-image: url(../public/image/jasper-wilde-Om51NdOhNX4-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: auto;
 }
 
 .card {
