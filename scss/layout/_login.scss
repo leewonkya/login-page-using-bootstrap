@@ -1,10 +1,16 @@
 .card {
     position: absolute;
-    width: 40%;
+    width: 45%;
     left: 50%;
     top: 50%;
     min-height: 50%;
     transform: translate(-50%, -50%);
+    @include mt() {
+        width: 80%;
+    }
+    @include mobile() {
+        width: 80%;
+    }
     &-header {
         .card-title {
             text-transform: uppercase;
@@ -78,6 +84,16 @@
                 right: 0;
                 border: solid .5px rgb(186, 186, 186);
             }
+        }
+        .form-group {
+            .lb-txb {
+                @include mobile() {
+                    display: none;
+                }
+            }
+        }
+        .group-btn {
+            text-transform: uppercase;
         }
     }
 }

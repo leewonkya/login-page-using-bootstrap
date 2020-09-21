@@ -1,7 +1,5 @@
 // Base
 @import './base/global';
-// Layout
-@import './layout/login';
 // page
 // @import './page/'
 // Utilities
@@ -9,3 +7,5 @@
 @import './utilities/font';
 @import './utilities/mixin';
 @import './utilities/variable';
+// Layout
+@import './layout/login';
